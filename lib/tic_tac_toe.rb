@@ -155,8 +155,10 @@ def current_player(board)
   return false, false, true
   while over?(board) == true
      turn(board)
-  if won?(board) == true && if if board[index[0]] == "X"
-    puts "Congratulations!  You are the winner!"
+  if won?(board) == true && if board[index[0]] == "X"
+    puts "Congratulations X!"
+  if won?(board) == true && if board[index[0]] == "O"
+      puts "Congratulations O!"
   else draw?(board) == true
     puts "No winner, Cat's Game!"
    end
