@@ -147,7 +147,7 @@ def current_player(board)
  end
 
  def play(board)
-  input = gets
+  user_input = gets.string
   return "1"
   input = gets
   $stdout.to receive(:puts)
@@ -155,7 +155,7 @@ def current_player(board)
   return false, false, true
   while over?(board) == true
      turn(board)
-  if won?(board) == true
+  if won?(board) == true && if if board[index[0]] == "X"
     puts "Congratulations!  You are the winner!"
   else draw?(board) == true
     puts "No winner, Cat's Game!"
