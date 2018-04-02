@@ -146,8 +146,9 @@ def current_player(board)
    end
  end
 
- def play?
+ def play(board)
   input = gets
+  $stdout.to receive(:puts)
    until over?(board) == true
      turn(board)
   if won?(board) == true
