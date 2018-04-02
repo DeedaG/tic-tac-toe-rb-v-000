@@ -151,7 +151,9 @@ def current_player(board)
   return "1"
   input = gets
   $stdout.to receive(:puts)
-   until over?(board) == true
+  3. times over?(board)
+  return false, false, true
+  while over?(board) == true
      turn(board)
   if won?(board) == true
     puts "Congratulations!  You are the winner!"
